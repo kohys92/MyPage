@@ -1,54 +1,76 @@
 <!<!DOCTYPE html>
 <html>
 <head>
-  <title>Owen's Profile</title>
+  <title>Owen's Homepage</title>
   <meta charset="utf-8">
   <style>
     h1 {
       color: #8e8e8e;
       font-size: 50px;
-      font: normal 50px/1.6 'Open Sans', helvetica, arial, sans-serif;
+      font: normal 50px 'Open Sans', helvetica, arial, sans-serif;
       text-align: center;
     }
     h2 {
       color: #5888e0;
       font-size: 40px;
-      font: normal 40px/1.6 'Open Sans', helvetica, arial, sans-serif;
+      font: normal 40px 'Open Sans', helvetica, arial, sans-serif;
       text-align: center;
     }
     a {
       color: #8e8e8e;
       font-size: 30px;
-      font: normal 30px/1.6 'Open Sans', helvetica, arial, sans-serif;
+      font: normal 30px 'Open Sans', helvetica, arial, sans-serif;
       text-decoration: none;
-    }
-    #active {
-      color:red;
     }
     .saw {
       color:#e05f51;
     }
     body {
       background-color: #191919;
+      margin: 0;
+    }
+    .topnav {
+      overflow: hidden;
+      background-color: #111;
+    }
+    .topnav a {
+      float: left;
+      color: #8e8e8e;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 30px;
+    }
+    .topnav a:hover {
+      background-color:#dbbb9e;
+      color: black;
+    }
+    .topnav a.active{
+      background-color: #5888e0;
+      color:white;
+    }
+    .topnav a.sns {
+      float: right;
+    }
+    p {
+      color: #8e8e8e;
+      font-size: 30px;
+      text-align: center;
+      font: normal 30px 'Open Sans', helvetica, arial, sans-serif;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to Owen's Profile</h1>
-  <ul>
-    <li><a href="https://www.instagram.com/owen_kys/" class="saw">Instagram</a></li>
-    <li><a href="https://www.facebook.com/owenyoungsookoh/" class="saw" id="active">Facebook</a></li>
-    <li><a href="https://github.com/kohys92">GitHub</a></li>
-    <li><a href="https://velog.io/@kohys92">Velog</a></li>
-  </ul>
-<!--
-  <ul>
-    <li><a href="https://www.instagram.com/owen_kys/"><font color="red">Instagram</font></a></li>
-    <li><a href="https://www.facebook.com/owenyoungsookoh/"><font color="red">Facebook</font></a></li>
-    <li><a href="https://github.com/kohys92"><font color="red">GitHub</font></a></li>
-    <li><a href="https://velog.io/@kohys92"><font color="red">Velog</font></a></li>
-  </ul>
-  -->
-  <h2>My bibliography</h2>
+  <h1>Owen's Homepage</h1>
+  <div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="Contact.html">Contact</a>
+    <a href="About.html">About</a>
+    <a href="https://www.instagram.com/owen_kys/" class="sns">Instagram</a>
+    <a href="https://www.facebook.com/owenyoungsookoh/" class="sns">Facebook</a>
+    <a href="https://velog.io/@kohys92" class="sns">Velog</a>
+    <a href="https://github.com/kohys92" class="sns">GitHub</a>
+  </div>
+<p> Welcome home </p>
 </body>
 </html>
