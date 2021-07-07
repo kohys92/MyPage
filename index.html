@@ -5,30 +5,60 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
+  <script>
+
+  function bodyBackgroundSetColor(color){
+    document.querySelector('body').style.backgroundColor = color;
+  }
+
+  function bodyFontSetColor(color) {
+    document.querySelector('body').style.color= color;
+  }
+
+  function topNavBackgroundSetColor(color) {
+    document.querySelector('.topnav').style.backgroundColor= color;
+  }
+
+  function h1TagSetColor(color) {
+    document.querySelector('h1').style.backgroundColor= color;
+  }
+
+  function buttonSetColor(color) {
+    document.querySelector('.button').style.backgroundColor = color;
+  }
+
+  function setDataMode(value) {
+    document.querySelector('body').dataset.mode = value;
+  }
+
+  function themeHandler(self) {
+      var target = document.querySelector('body');
+      if(target.dataset.mode === 'Dark'){
+        bodyBackgroundSetColor('white');
+        bodyFontSetColor('black');
+        topNavBackgroundSetColor('white');
+        h1TagSetColor('white');
+        buttonSetColor('white');
+        setDataMode('Light');
+        self.value = 'Dark';
+      } else {
+        bodyBackgroundSetColor('#191919');
+        bodyFontSetColor('#8e8e8e');
+        topNavBackgroundSetColor('#191919');
+        h1TagSetColor('#111');
+        buttonSetColor('#191919');
+        setDataMode('Dark');
+        self.value = 'Light';
+      }
+    }
+  </script>
 </head>
 <body data-mode="Dark">
   <h1>Owen's Homepage</h1>
   <span>
-    <!-- <input class="button" type="button" value="Dark" style="float: right;" onclick="document.querySelector('body').style.backgroundColor ='#191919'; document.querySelector('body').style.color='#8e8e8e';
-    document.querySelector('.topnav').style.backgroundColor='#191919';
-    document.querySelector('h1').style.backgroundColor='#111';">
-    <input class="button" type="button" value="Light" style="float: right;" onclick="document.querySelector('body').style.backgroundColor ='white'; document.querySelector('body').style.color='black'; document.querySelector('.topnav').style.backgroundColor='white';
-    document.querySelector('h1').style.backgroundColor='white';"> -->
     <input class="button" type="button" value="Light" style="float: right" onclick="
-      if(document.querySelector('body').dataset.mode === 'Dark'){
-         document.querySelector('body').style.backgroundColor ='white'; document.querySelector('body').style.color='black'; document.querySelector('.topnav').style.backgroundColor='white';
-        document.querySelector('h1').style.backgroundColor='white';
-        document.querySelector('body').dataset.mode = 'Light';
-        document.querySelector('.button').style.backgroundColor ='white';
-        this.value = 'Dark';
-      } else {
-        document.querySelector('body').style.backgroundColor ='#191919'; document.querySelector('body').style.color='#8e8e8e';
-        document.querySelector('.topnav').style.backgroundColor='#191919';
-        document.querySelector('h1').style.backgroundColor='#111';
-        document.querySelector('body').dataset.mode = 'Dark';
-        document.querySelector('.button').style.backgroundColor ='#191919';
-        this.value = 'Light';
-      }">
+      themeHandler(this);
+      ">
   </span>
   <div class="topnav">
     <a class="active" href="index.html">Home</a>
